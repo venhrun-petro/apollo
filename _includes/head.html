@@ -1,0 +1,36 @@
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="theme-color" content="{{ site.theme_color }}">
+  <meta name="msapplication-TileColor" content="{{ site.theme_color }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/> 
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}assets/img/logo.png" property="og:image">
+  <title>
+    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  </title>
+  <meta name="description" 
+  content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:type" content="{{ site.og-type }}" />
+  <meta property="og:title" content=" {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:description"
+          content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:image" content="{{ site.og-image }}" />
+  <meta property="og:site_name" content="{{ site.og-site_name }}" />
+  <meta property="og:url" content="{{ site.og-url }}" />
+  <meta name="application-name" content="{{ site.application-name }}" />
+  <meta name="twitter:card" content="{{ site.twitter-card }}" />
+  <meta name="twitter:site" content="{{ site.twitter-site }}" />
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta name="twitter:description"
+          content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="twitter:image" content="{{ site.twitter-img }}" />
+  {% assign data = site.data %}
+   
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css"/>
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/bootstrap.css"/>
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/font-awesome_icon-font.css"/>
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/et-line_icon-font.css"/>
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/plugins/animate.css"/>
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/plugin/rs-plugin/css/settings.css"/>
+  
+</head>

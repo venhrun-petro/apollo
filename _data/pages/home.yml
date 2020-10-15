@@ -1,0 +1,79 @@
+display-number: "true"
+display-pricing: "true"
+display-slider: "true"
+
+
+number: 
+  - items: ["9878","Satisfied customers"]
+  - items: ["78","Companies"]
+  - items: ["110 323","Games created"]
+  - items: ["10 684 383","Connects every day"]
+
+
+pricing:
+  - type: "Free"
+    level: "For a beginner"
+    money: "0"
+    data: "per month"
+    btn: ["TRY IT FREE","#"]
+    column:
+      - list: "20 CCU"
+  - type: "Basic"
+    level: "For a developer"
+    money: "55"
+    data: "one time"
+    btn: ["Buy now","#"]
+    column:
+      - list: "100 CCU"
+      - list: "No CCU Burst"
+      - list: "60 Month"
+      - list: "300 GB Traffic"
+  - active: "pricing_active"
+    type: "Standard "
+    level: "For a small team"
+    money: "45"
+    data: "per month"
+    btn: ["Buy now","#"]
+    column:
+      - list: "500 CCU"
+      - list: "CCU Burst"
+      - list: "1.5 TB Traffic"
+  - type: "Pro"
+    level: "For a growing team"
+    money: "95"
+    data: "per month"
+    btn: ["Buy now","#"]
+    column:
+      - list: "1000 CCU"
+      - list: "CCU Burst"
+      - list: "3 TB Traffic"
+  - type: "Uber"
+    level: "For a large team"
+    money: "195"
+    data: "per month"
+    btn: ["Buy now","#"]
+    column:
+      - list: "3000 CCU"
+      - list: "CCU Burst"
+      - list: "6 TB Traffic"
+
+slider:
+  - img: ["assets/img/floyd.jpg", "floyd.jpg"]
+    name: "Floyd Warren"
+    dev: "Indie game developer"
+    info: "“In et consectetur ad do consectetur ut ea. Veniam duis esse ut anim non. Sunt magna ex aute non sit est ut sint. Excepteur ut exercitation non incididunt irure aliquip. Lorem ipsum dolor sit amet, consectetur adipiscing elit”"
+  - img: ["assets/img/floyd.jpg", "floyd.jpg"]
+    name: "Floyd Warren"
+    dev: "Indie game developer"
+    info: "“In et consectetur ad do consectetur ut ea. Veniam duis esse ut anim non. Sunt magna ex aute non sit est ut sint. Excepteur ut exercitation non incididunt irure aliquip. Lorem ipsum dolor sit amet, consectetur adipiscing elit”"
+  - img: ["assets/img/floyd.jpg", "floyd.jpg"]
+    name: "Floyd Warren"
+    dev: "Indie game developer"
+    info: "“In et consectetur ad do consectetur ut ea. Veniam duis esse ut anim non. Sunt magna ex aute non sit est ut sint. Excepteur ut exercitation non incididunt irure aliquip. Lorem ipsum dolor sit amet, consectetur adipiscing elit”"
+  - img: ["assets/img/floyd.jpg", "floyd.jpg"]
+    name: "Floyd Warren"
+    dev: "Indie game developer"
+    info: "“In et consectetur ad do consectetur ut ea. Veniam duis esse ut anim non. Sunt magna ex aute non sit est ut sint. Excepteur ut exercitation non incididunt irure aliquip. Lorem ipsum dolor sit amet, consectetur adipiscing elit”"
+
+
+

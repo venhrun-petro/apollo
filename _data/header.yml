@@ -1,0 +1,29 @@
+display-nav: "true"
+
+nav:
+  - list: ["Features","features"]
+    sub-nav:
+      - img: ["assets/img/cross.svg","cross"]
+        list: ["Cross Platform","singl-features/"]
+      - img: ["assets/img/easy.svg","easy"]
+        list: ["Easy to Scale","singl-features-2/"]
+      - img: ["assets/img/game.svg","game"]
+        list: ["Game Genres","singl-features-3/"]
+      - img: ["assets/img/developers.svg","developer"]
+        list: ["For Developers","#"]
+      - img: ["assets/img/storage.svg","storage"]
+        list: ["Data Storage","#"]
+      - img: ["assets/img/tournaments.svg","tournaments"]
+        list: ["Tournamets and Achievements","#"]
+  - list: ["Pricing","pricing"]
+  - list: ["Tutorials","tutorial"]
+    sub-nav:
+      - img: ["assets/img/futuristic_tanks.jpg","futuristic_tanks"]
+        list: ["Futuristic Tanks","#"]
+      - img: ["assets/img/reversi.jpg","reversi"]
+        list: ["Reversi","#"]
+      - img: ["assets/img/billiadrds.jpg","billiadrds"]
+        list: ["Billiards","#"]
+  - list: ["Documentation","#documentation"]
+  - list: ["Blog","#blog"]
+  - list: ["Contact","#contact"]

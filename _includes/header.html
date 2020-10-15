@@ -1,0 +1,109 @@
+<section id="preloader">
+  <div class="site-spinner"></div>
+</section>
+
+
+
+<div id="page-wraper">
+
+  <!-- Header -->
+  <header id="header" class="header">
+      <div class="header-inner">
+
+          <!-- Logo -->
+          <div class="logo">
+              <a href="{{ site.baseurl }}">
+                  <img class="logo-light" src="{{ site.baseurl }}assets/img/logo-light.png" alt="Apollo" />
+                  <img class="logo-dark" src="{{ site.baseurl }}assets/img/logo-dark.png" alt="Apollo" />
+              </a>
+          </div>
+          <!-- End Logo -->
+
+          <!-- Mobile Navbar Icon -->
+          <div class="nav-mobile nav-bar-icon">
+              <span></span>
+          </div>
+          <!-- End Mobile Navbar Icon -->
+
+          <!-- Navbar Navigation -->
+          <div class="nav-menu singlepage-nav">
+              <ul class="nav-menu-inner">
+                  <li>
+                      <a class="current" href="#intro">Home</a>
+                  </li>
+                  <li>
+                      <a href="#">Best Practices</a>
+                  </li>
+                  <li>
+                      <a href="#">Event Inspiration</a>
+                  </li>
+                  <li>
+                    <a href="mailto:hello@galasathome.com">hello@galasathome.com</a>
+                  </li>
+                  <li>
+                    <a href="tel:+18444694252">1-844-4MY-GALA</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- End Navbar Navigation -->
+
+      </div>
+  </header>
+
+
+
+
+
+<!-- <header class="header">
+  <div class="big_container">
+      <div class="header_cont">
+          <a class="header_cont_logo"  href="{{ site.baseurl }}">
+              <img src="{{ site.baseurl }}assets/img/logo.svg" alt="logo">     
+          </a>
+            {% assign data = site.data %}
+            {% assign header = data.header %}
+            {%  if header.nav and  header.display-nav!="false" %}
+            <nav class="header_cont_nav nav" id="mainNav"> 
+                <ul>
+                  {% for nav in header.nav %}
+                    <li>
+                        <a href="{{ site.baseurl }}{{ nav.list[1] }}">{{ nav.list[0] }}
+                          {% assign sub-nav = nav.sub-nav  %}
+                          {%  if sub-nav %}
+                            <img src="{{ site.baseurl }}assets/img/arrow.svg" alt="arrow">
+                          {%  endif %}
+                        </a>
+                        {%  if sub-nav %} 
+                          <ul> 
+                              {% for sub-list in sub-nav %}
+                                  <li>
+                                    <a href="{{ site.baseurl }}{{ sub-list.list[1] }}">
+                                        {%  if sub-list.img %}
+                                          <img src="{{ site.baseurl }}{{ sub-list.img[0] }}" alt="{{ sub-list.img[1] }}">
+                                        {%  endif %}
+                                        <span>{{ sub-list.list[0] }}</span>
+                                      </a>
+                                  </li>
+                              {% endfor %}
+                          </ul>
+                        {%  endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+                <div class="header_cont_right">
+                    <a href="#" class="header_cont_right_sign">Sign In</a>
+                    <a href="#" class="header_cont_right_free">Try It Free</a>
+                </div>
+            </nav>
+            {%  endif %}
+           <div class="burder_cont">
+              <div class="burger clearfix ">
+                  <div class=burger-menu></div>
+                  <div class=burger-menu></div>
+                  <div class=burger-menu></div>
+              </div>
+           </div>
+      </div>
+  </div>
+</header> -->
+

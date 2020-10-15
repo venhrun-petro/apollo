@@ -1,0 +1,41 @@
+::selection {
+    color: $white ; 
+    background: $grey ; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-lato;
+    .main{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .footer{
+        display: flex;
+    }
+}
+
+.big_container{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+
+.g-button, .g-button:active{
+    font-family: $font-lato;
+    color: $yellow3;
+    background: $yellow;
+    border-radius: 5px;
+    &:hover, &:focus{
+        background-color: $yellow2;
+        box-shadow: 0px 7px 14px rgba(144, 144, 162, 0.32);
+      }
+}
+

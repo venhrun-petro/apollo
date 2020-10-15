@@ -1,0 +1,39 @@
+---
+layout: page
+---
+
+<!-- 
+default{
+  title: "#"
+  description: "#"
+  permalink: "#"
+}
+main-f{
+  f-img: ["#","#"]
+  f-icon: ["#","#"] 
+  f-title: "#"
+  f-sub-title: "#"
+  f-btn: ["#","#"] 
+} -->
+
+<section class="singl-features">
+    <div class="singl-features_header {% if page.f-img[0] %}singl-features_header-color-white{% elsif page.f-img!='false' %} {% else %}singl-features_header-no-background{% endif %}">
+      {% if page.f-img!='false' %}
+        <img class="singl-features_header_img" src="{{ site.baseurl }}{% if page.f-img[0] %}{{ page.f-img[0] }}{% else %}assets/img/singl-features/title_bg-white.png{% endif %}" 
+          alt="{% if page.f-img[1] %}{{ page.f-img[1] }}{% else %}title_bg-white{% endif %}">
+      {% endif %}
+      <img class="singl-features_header_icon" src="{{ site.baseurl }}{{ page.f-icon[0] }}" alt="{{ page.f-icon[1] }}">
+      <h2 class="singl-features_header_title">{{ page.f-title }}</h2>
+      <p class="singl-features_header_sub-title">{{ page.f-sub-title }}</p>
+      <a class="singl-features_header_btn" href="{% if page.f-btn[1] %}{{ page.f-btn[1] }}{% else %}/{% endif %}">{% if page.f-btn[0] %}{{ page.f-btn[0] }}{% else %}Get started{% endif %}</a>
+    </div>
+    <div class="markdown_content">
+        {{ content }}
+    </div>
+</section>
+{% include features.html title="Check out some other features?" paragraph="Choose any of these features to read more information." %}
+<!-- This componetn has too parameters: title, paragraph  -->
+
+{% include get_started.html %}
+<!-- This componetn has many parameters: class, paragraph, btn-src, btn-text,  img-src -->
+

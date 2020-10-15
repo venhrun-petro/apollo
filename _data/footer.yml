@@ -1,0 +1,30 @@
+display-nav: "true"
+display-row: "true"
+
+
+nav:
+  - column:  
+      - list: ["Product","#"]
+      - list: ["Features","#"]
+      - list: ["Pricing","#"]
+      - list: ["FAQ","#"]
+  - column:  
+      - list: ["Tutorials","#"]
+      - list: ["Futuristic tanks","#"]
+      - list: ["Reversi","#"]
+      - list: ["Billiards","#"]
+  - column:  
+      - list: ["Company","#"]
+      - list: ["About us","#"]
+      - list: ["Career","#"]
+      - list: ["Blog","#"]
+  - column:  
+      - list: ["Connect","#"]
+      - list: ["Try it free","#"]
+      - list: ["Contact us","#"]
+
+
+sozial:
+  - list: ["assets/img/facebook.svg","facebook","#"]
+  - list: ["assets/img/twitter.svg","twitter","#"]
+  - list: ["assets/img/linkedIn.svg","linkedIn","#"]

@@ -1,0 +1,425 @@
+.home{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    &_img{
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 22;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+    &_cont{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        z-index: 999;
+        &_title{
+            font-family: $font-ubuntu;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 48px;
+            line-height: 55px;
+            color: $grey;
+            width: 100%;
+            max-width: 487px;
+            margin-bottom: 40px;
+        }
+        &_paragraph{
+            font-family: $font-lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 150%; 
+            color: $grey2;
+            width: 100%;
+            max-width: 549px;
+            margin-bottom: 40px;
+        }
+        &_btn{
+            padding: 11px 30px 12px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.number{
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding-bottom: 55px;
+    &_cont{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 769px;
+        margin: 0 auto;
+        position: relative;
+        justify-content: space-between;
+        &_items{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &_number{
+                font-family: $font-ubuntu;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+                color: $grey;
+                margin-bottom: 7px;
+            }
+            &_text{
+                font-family: $font-lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 150%;
+                color: $grey2 ;
+            }
+        }
+    }
+}
+
+.pricing{
+    display: flex;
+    width: 100%;
+    position: relative;
+    &_cont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        &_title{
+            font-family: $font-ubuntu;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 41px;
+            text-align: center;
+            color: $grey;
+            margin-top: 20px;
+        }
+        &_paragraph{
+            font-family: $font-lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 150%;
+            text-align: center;
+            color: $grey2;
+            margin: 20px 0;
+        }
+        &_list{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            margin: 10px 0 100px;
+            &_items{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                width: 100%;
+                max-width: 218px;
+                border: 1px solid $grey3 ;
+                box-shadow: 0px 10px 30px $shadow-color;
+                border-radius: 5px;
+                margin-top: 30px;
+                padding: 20px 10px 25px;
+                &_type{
+                    font-family: $font-ubuntu;
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 20px;
+                    line-height: 23px;
+                    text-align: center;
+                    color: $grey;
+                    margin: 20px auto 8px;
+                }
+                &_level{
+                    font-family: $font-lato ;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 150%;
+                    text-align: center;
+                    color: $grey2;
+                    margin-bottom: 15px;
+                }
+                &_money{
+                    position: relative;
+                    font-family: $font-ubuntu;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 48px;
+                    line-height: 55px;
+                    color: $grey;
+                    span{
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 21px;
+                        transform: translate(100%, 0);
+                    }
+                }
+                &_data{
+                    font-family: $font-lato;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 150%;
+                    text-align: center;
+                    color: $grey2;
+                }
+                &_btn{
+                    font-family: $font-lato;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 14px;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: $yellow5;
+                    border: 1px solid $yellow ;
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    padding: 7px 19px 9px;
+                    min-width: 113px;
+                    text-align: center;
+                    margin: 26px auto 40px;
+                    transition: 0.3s all;
+                    &:hover, &:active, &:focus{
+                        border: 1px solid transparent;
+                        background-color: $yellow;
+                        color: $white;
+                        box-shadow: 0px 7px 14px $button-shadow ;
+                    }
+                }
+                &_column{
+                    li{
+                        font-family: $font-lato ;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 150%;
+                        font-feature-settings: 'tnum' on, 'lnum' on;
+                        color: $grey;
+                        margin-bottom: 9px;
+                        &:nth-last-child(1){
+                            margin-bottom: 0px;
+                        }
+                        img{
+                            margin-right: 8px;
+                        }
+                    }
+                }
+                &.pricing_active{
+                    &:before{
+                        content: ' ';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 10px;
+                        background: $line;
+                        border-radius: 5px 5px 0px 0px;
+                    }
+                    .pricing_cont_list_items_btn{
+                        background: $yellow;
+                        color: $yellow3;
+                        &:hover, &:active, &:focus{
+                            background-color: $yellow2;
+                            box-shadow: 0px 7px 14px $button-shadow ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.slider{
+    display: flex;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100px;
+    &_title{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 60px;
+        font-family: $font-ubuntu;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 41px;
+        text-align: center;
+        color: $grey;
+    }
+    &_paragraph{
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-family: $font-lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+        color: $grey2;
+        margin: 20px 0 5px;
+    }
+    &_cont{
+        width: 100%;
+        .slick-initialized{
+            .slick-slide{
+                margin: 0 15px;
+            }
+            .slick-track{
+                padding: 55px 0;
+            }
+            .slick-dots li button:before{
+                font-size: 16px;
+                color: #DFE2E8;
+                opacity: 1;
+            }
+            .slick-dots li.slick-active button:before{
+                color: #F5BB2F;
+            }
+        }
+        &_list{
+            background: $white ;
+            box-shadow: 0px 10px 30px $shadow-color;
+            border-radius: 5px;
+            padding: 30px;
+            position: relative;
+            &_header{
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                padding-right: 35px;
+                margin-bottom: 20px;
+                &_img{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                }
+                &_text-cont{
+                    display: flex;
+                    flex-direction: column;
+                    &_name{
+                        font-family: $font-lato ;
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: $grey;
+                        margin: 6px 0 2px;   
+                    }
+                    &_dev{
+                        font-family: $font-lato;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: $grey2;
+                    }
+                }
+                &_abs{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+            &_info{
+                font-family: $font-lato;
+                font-style: italic;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 150%;
+                color: $grey2;                
+                margin-bottom: 6px;
+            }
+        }
+    }
+}
+
+.my-row{
+    margin: 0 -30px;
+}
+
+@media (max-width: 1280px) {
+    .pricing_cont_list{
+        justify-content: space-around;
+    }  
+    .home_img{
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .slick-list{
+        height: auto!important;
+    }
+    .slider_cont .slick-initialized .slick-slide{
+        padding: 0 30px;
+    }
+    .home, .home_cont{
+        height: auto;
+    }
+    .home_cont_title{
+        margin-top: 160px;
+    }
+    .home_cont_btn{
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 575px) {
+    .slider{
+        padding-bottom: 20px;
+        &_title, &_paragraph{
+            padding: 0 20px;
+        }
+    }
+    .pricing_cont_paragraph, .pricing_cont_title, .home_cont{
+        padding: 0 20px;
+    }
+    .pricing_cont_list_items{
+        margin: 30px 20px 0;
+    }
+    .pricing_cont_list{
+        margin: 10px 0 20px;
+    }
+    .number_cont{
+        justify-content: space-around;
+        .number_cont_items{
+            min-width: 150px;
+            margin-top: 20px;
+        }
+    }
+    .home_img{
+        display: none;
+    }
+}
+// .slick-initialized .slick-active:nth-child(2){
+    
+// }
