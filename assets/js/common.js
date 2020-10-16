@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-  console.log('1');
+  // console.log('1');
   var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
   
     if ("IntersectionObserver" in window) {
