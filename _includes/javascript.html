@@ -1,21 +1,28 @@
  
 <script>
     function loadCSS(hf) {
-            var ms = document.createElement("link");
+            let ms = document.createElement("link");
             ms.rel = "stylesheet";
             ms.href = hf;
+            document.getElementsByTagName("head")[0].appendChild(ms);
+    }
+    function loadCSSFont(hf) {
+            let ms = document.createElement("link");
+            ms.rel = "stylesheet";
+            ms.href = hf;
+            ms.rel="preload"
             document.getElementsByTagName("head")[0].appendChild(ms);
     }
     loadCSS("{{ site.baseurl }}assets/css/style.css");
     loadCSS("{{ site.baseurl }}assets/css/bootstrap.css");
     loadCSS("{{ site.baseurl }}assets/css/plugins/animate.css");
-    loadCSS("{{ site.baseurl }}assets/css/font-awesome_icon-font.css");
+    loadCSSFont("{{ site.baseurl }}assets/css/font-awesome_icon-font.css");
     loadCSS("{{ site.baseurl }}assets/css/et-line_icon-font.css");
     loadCSS("{{ site.baseurl }}assets/css/plugins/owl.carousel.css");
     loadCSS("{{ site.baseurl }}assets/css/plugins/magnific-popup.css");
-    loadCSS("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic");
-    loadCSS("https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,500,600,700,800");
-    loadCSS("https://fonts.googleapis.com/css?family=Ubuntu:400,300,400italic,500,500italic,700,700italic,300italic");
+    loadCSSFont("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic");
+    loadCSSFont("https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,500,600,700,800");
+    loadCSSFont("https://fonts.googleapis.com/css?family=Ubuntu:400,300,400italic,500,500italic,700,700italic,300italic");
  
 
 
@@ -27,8 +34,6 @@
     var scr = {
         "scripts": [
              {"src": "{{ site.baseurl }}assets/js/plugins/owl.carousel.min.js", "async": false},
-            //  {"src": "{{ site.baseurl }}assets/plugin/rs-plugin/js/jquery.themepunch.revolution.min.js", "async": false},
-            //  {"src": "{{ site.baseurl }}assets/js/revolution-slider.js", "async": false},
              {"src": "{{ site.baseurl }}assets/js/theme.js", "async": false},
              {"src": "{{ site.baseurl }}assets/js/common.js", "async": false}
         ]
