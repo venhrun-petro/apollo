@@ -1,18 +1,28 @@
 
-// $(document).ready(function(){
-//      console.log('true 1  11  1');
- 
-// }); 
-console.log('2')
-window.tdiff = []; fred = function(a,b){return a-b;};
-window.document.onload = function(e){ 
-    console.log("document.onload", e, Date.now() ,window.tdiff,  
-    (window.tdiff[0] = Date.now()) && window.tdiff.reduce(fred) ); 
-}
-// alert('1');
-// // document.addEventListener("DOMContentLoaded", function(event) { 
-//   setTimeout(function(){
-//     console.log('1  11  1');
-//   }, 100);
+$(document).ready(function(){
+  console.log('1');
+  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
   
-// });
+    if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+            let lazyImage = entry.target;
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.classList.remove("lazy");
+            lazyImageObserver.unobserve(lazyImage);
+            }
+        });
+        });
+  
+        lazyImages.forEach(function(lazyImage) {
+        lazyImageObserver.observe(lazyImage);
+        });
+      } else {
+          // Possibly fall back to event handlers here
+      }
+}); 
+ 
+ 
+ 

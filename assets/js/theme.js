@@ -8,18 +8,22 @@ $(function () {
         int_nav_menu_height();
         int_SliderPluguns();
         init_wow_animation();
-        int_isotopPortfolio();
+        // int_isotopPortfolio();
         int_lightbox();
         int_Elements();
-    });
-
-    $(window).load(function () {
-        int_isotopPortfolio();
-
-        // Site Preloader
         $('#preloader').fadeOut('slow', function () {
             $(this).remove();
         });
+    });
+
+    $(window).load(function () {
+        // int_isotopPortfolio();
+
+        // Site Preloader
+        setTimeout(function() {
+            
+        }, 100);
+        
 
     });
 

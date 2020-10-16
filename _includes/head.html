@@ -4,7 +4,7 @@
   <meta name="theme-color" content="{{ site.theme_color }}">
   <meta name="msapplication-TileColor" content="{{ site.theme_color }}">
   <meta name="viewport" content="width=device-width, initial-scale=1"/> 
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}assets/img/logo.png" property="og:image">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}assets/img/favicon.png" property="og:image">
   <title>
     {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
   </title>
@@ -24,13 +24,7 @@
   <meta name="twitter:description"
           content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   <meta name="twitter:image" content="{{ site.twitter-img }}" />
-  <!-- {% assign data = site.data %} -->
    
-  <!-- <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css"/>
-  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/bootstrap.css"/>
-  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/font-awesome_icon-font.css"/>
-  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/et-line_icon-font.css"/>
-  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/plugins/animate.css"/>
-  <link rel="stylesheet" href="{{ site.baseurl }}assets/plugin/rs-plugin/css/settings.css"/> -->
-  
+   
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/head.css"/>
 </head>
