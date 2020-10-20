@@ -2,32 +2,45 @@
 $(document).ready(function(){
   // console.log('1');
   var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-  console.log(lazyImages.event);
+ 
   
   if ("IntersectionObserver" in window) {
       let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(function(entry) {
-          // console.log(entry, ' netry')
-          // console.log(entry.isIntersecting)
             if (entry.isIntersecting) {
               let lazyImage = entry.target;
-              // console.log(lazyImage, ' lazy ');
               lazyImage.src = lazyImage.dataset.src;
               lazyImage.srcset = lazyImage.dataset.srcset;
               lazyImage.classList.remove("lazy");
               lazyImageObserver.unobserve(lazyImage);
-            }else{
-              // console.log(entry);
             }
-            // if (entry.intersectionRatio === 1) {
-            //   console.log(entry.target);
-            // }
-            // console.log(entry.target, ' target ');
         });
       });
 
       lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage);
+          lazyImageObserver.observe(lazyImage);
+      });
+    } else {
+        // Possibly fall back to event handlers here
+        console.log('img false')
+    }
+
+    var lazyVideos = [].slice.call(document.querySelectorAll(".lazy-video"));
+
+    if ("IntersectionObserver" in window) {
+      let lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              let lazyImage = entry.target;
+              let LazyClass = lazyImage.dataset.video;
+              lazyImage.classList.add(LazyClass);
+              lazyVideoObserver.unobserve(lazyImage);
+            }
+        });
+      });
+
+      lazyVideos.forEach(function(lazyVideo) {
+        lazyVideoObserver.observe(lazyVideo);
       });
     } else {
         // Possibly fall back to event handlers here
