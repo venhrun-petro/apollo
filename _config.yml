@@ -1,0 +1,48 @@
+# Site settings
+title: "Opollo"
+theme_color: "#5E5E81"
+description: "Opollo"
+og-type: ""
+og-image: ""
+og-site_name: ""
+og-url: ""
+application-name: ""
+twitter-card: ""
+twitter-site: ""
+twitter-img: ""
+# baseurl: "https://apolo.netlify.app"
+baseurl: "/website/"
+url: "https://apolo.netlify.app/website/" 
+
+
+
+
+relative_permalinks: false
+permalink: /:title/
+
+
+# Build settings
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+
+paginate: 2
+
+
+markdown: kramdown
+paginate_path: "/blog/:num/"
+
+
+
+include: ["_pages"]
+
+# Exclude files and folder
+exclude:
+  - node_modules
+  - gulpfile.js
+  - package.json
+  - bower.json
+  - bower_components
+  - yarn.lock

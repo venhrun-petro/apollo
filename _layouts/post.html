@@ -102,9 +102,12 @@ layout: blog
               <!-- Next Prev pagination -->
               <div class="pagination-nav mt-60">
                   <ul>
-                      <li class="prev"><a href="#"><i class="fa fa-angle-left"></i>Prev Post</a></li>
-
-                      <li class="next"><a href="#">Next Post <i class="fa fa-angle-right"></i></a></li>
+                    {% if page.previous.url %}
+                      <li class="prev"><a href="{{ site.url }}{{page.previous.url}}"><i class="fa fa-angle-left"></i>Prev Post</a></li>
+                    {% endif %}
+                    {% if page.next.url %}
+                      <li class="next"><a href="{{ site.url }}{{page.next.url}}">Next Post <i class="fa fa-angle-right"></i></a></li>
+                    {% endif %}
                   </ul>
               </div>
               <!-- Next Prev pagination -->
@@ -120,15 +123,4 @@ layout: blog
 </section>
  
 
-<div>
-  {% if page.previous.url %}
-    <a class="l-prev" href="{{ site.url }}{{page.previous.url}}">&laquo; Talk.CSS #{{ page.previous.meetup }}</a>
-  {% endif %}
-  {% if page.next.url %}
-    <a class="l-next" href="{{ site.url }}{{page.next.url}}">Talk.CSS #{{ page.next.meetup }} &raquo;</a>
-  {% endif %}
-</div>
-
-{% if page.hascodepen %}
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-{% endif %}
+ 
