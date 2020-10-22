@@ -19,14 +19,16 @@ layout: blog
                 <div class="blog-post">
                     {% if post.video %}
                       <div class="post-media">
-                        <div class="fluid-width-video-wrapper" style="padding-top: 56.2%;"><iframe src="{{ post.video }}" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0"></iframe></div>
+                        <div class="fluid-width-video-wrapper lazy-iframe" style="padding-top: 56.2%;" data-iframe="{{ post.video }}">
+                          <!-- <iframe src="{{ post.video }}" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0"></iframe> -->
+                        </div>
                       </div>
                     {% elsif post.slider-img %}
                       <div class="post-media">
                         <div class="owl-carousel post-carousel nf-carousel-theme white">
                           {% for slider in post.slider-img %}
                             <div class="item">
-                                <img src="{{ slider.img | prepend: site.url }}" alt="slider-img" />
+                                <img class="lazy" data-src="{{ slider.img | prepend: site.url }}" data-srcset="{{ slider.img | prepend: site.url }}" alt="slider-img" />
                             </div>
                           {% endfor %}
                              
@@ -34,7 +36,7 @@ layout: blog
                       </div>
                     {% else %}
                       <div class="post-media">
-                          <img alt="blog" src="{{ post.img | prepend: site.url }}">
+                          <img class="lazy" alt="blog" data-src="{{ post.img | prepend: site.url }}" data-srcset="{{ post.img | prepend: site.url }}">
                       </div>
                     {% endif %}
                     <div class="post-meta">

@@ -309,18 +309,18 @@ $(function () {
     // ----------------------------------------------------------------
     function init_wow_animation() {
         $(function () {
-
-            var wow = new WOW({
-                boxClass: 'wow',
-                animateClass: 'animated',
-                offset: 90,
-                mobile: false,
-                live: true
-            });
-
-            if ($("body").hasClass("wow-animate")) {
-                wow.init();
-            }
+                var wow = new WOW({
+                    boxClass: 'wow',
+                    animateClass: 'animated',
+                    offset: 90,
+                    mobile: false,
+                    live: true
+                });
+    
+                if ($("body").hasClass("wow-animate")) {
+                    wow.init();
+                }
+            
 
         });
     }

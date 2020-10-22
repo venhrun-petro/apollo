@@ -27,21 +27,23 @@ layout: blog
                   </div>
                    {% if page.video %}
                       <div class="post-media">
-                        <div class="fluid-width-video-wrapper" style="padding-top: 56.2%;"><iframe src="{{ page.video }}" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0"></iframe></div>
+                        <div class="fluid-width-video-wrapper lazy-iframe" style="padding-top: 56.2%;" data-iframe="{{ page.video }}">
+                          <!-- <iframe src="{{ page.video }}" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0"></iframe> -->
+                        </div>
                       </div>
                     {% elsif page.slider-img %}
                       <div class="post-media">
                         <div class="owl-carousel post-carousel nf-carousel-theme white">
                           {% for slider in page.slider-img %}
                             <div class="item">
-                                <img src="{{ slider.img | prepend: site.url }}" alt="slider-img" />
+                                <img class="lazy" data-src="{{ slider.img | prepend: site.url }}" data-srcset="{{ slider.img | prepend: site.url }}" alt="slider-img" />
                             </div>
                           {% endfor %}
                         </div>
                       </div>
                     {% else %}
                       <div class="post-media">
-                        <img alt="blog" src="{{ page.img | prepend: site.url }}">
+                        <img class="lazy" alt="blog" data-src="{{ page.img | prepend: site.url }}" data-srcset="{{ page.img | prepend: site.url }}">
                       </div>
                     {% endif %}
 
@@ -83,7 +85,7 @@ layout: blog
                       </div>
                       <div class="post-author-body">
                           <div class="post-author-image">
-                              <img src="{{ site.url }}{{ poted.images }}" alt="posted_image" />
+                              <img  class="lazy" data-src="{{ site.url }}{{ poted.images }}" data-srcset="{{ site.url }}{{ poted.images }}" alt="posted_image" />
                           </div>
                           {{ poted.text }}
                       </div>
