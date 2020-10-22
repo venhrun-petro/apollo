@@ -11,7 +11,7 @@ twitter-card: ""
 twitter-site: ""
 twitter-img: ""
 # baseurl: "https://apolo.netlify.app"
-baseurl: "/website/"
+baseurl: "/"
 url: "https://apolo.netlify.app/website/" 
 
 
