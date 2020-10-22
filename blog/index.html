@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-<section id="inner-intro" class="inner-intro bg-image overlay-dark40 dark-bg parallax parallax-background2" data-background-img="{{site.baseurl}}assets/img/full/13.jpg">
+<section id="inner-intro" class="inner-intro bg-image overlay-dark40 dark-bg parallax parallax-background2" data-background-img="{{site.url}}assets/img/full/13.jpg">
   <div class="container">
       <div class="intro-content">
           <div class="intro-content-inner">
@@ -20,21 +20,21 @@ layout: page
             <div class="col-md-4 col-sm-6 mb-45">
                 <div class="blog-post">
                     <div class="post-media">
-                        <img alt="blog" src="{{ post.img | prepend: site.baseurl }}">
+                        <img alt="blog" src="{{ post.img | prepend: site.url }}">
                     </div>
                     <div class="post-meta">
                         <span>{{ post.author }},</span>
                         <span class="post-date">{{ post.date | date_to_string }}</span>
                     </div>
                     <div class="post-header">
-                        <h4 class="alt-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+                        <h4 class="alt-title"><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h4>
                     </div>
                     <div class="post-entry">
                         <p>{{ post.description }}</p>
                     </div>
                     <div class="post-tag">
-                        <span><a href="{{ post.url | prepend: site.baseurl }}">Branding</a></span>
-                        <span><a href="{{ post.url | prepend: site.baseurl }}">Design</a></span>
+                        <span><a href="{{ post.url | prepend: site.url }}">Branding</a></span>
+                        <span><a href="{{ post.url | prepend: site.url }}">Design</a></span>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@ layout: page
 
           <div class="pagination">
             {% if paginator.previous_page %}
-              <a href="{{ paginator.previous_page_path  | prepend: site.baseurl}}" class="previous">
+              <a href="{{ paginator.previous_page_path  | prepend: site.url}}" class="previous">
                 Previous
               </a>
             {% else %}
@@ -52,7 +52,7 @@ layout: page
               Page: {{ paginator.page }} of {{ paginator.total_pages }}
             </span>
             {% if paginator.next_page %}
-              <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">Next</a>
+              <a href="{{ paginator.next_page_path | prepend: site.url }}" class="next">Next</a>
             {% else %}
               <span class="next ">Next</span>
             {% endif %}
