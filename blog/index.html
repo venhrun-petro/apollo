@@ -19,9 +19,7 @@ layout: blog
                 <div class="blog-post">
                     {% if post.video %}
                       <div class="post-media">
-                        <div class="fluid-width-video-wrapper lazy-iframe" style="padding-top: 56.2%;" data-iframe="{{ post.video }}">
-                          <!-- <iframe src="{{ post.video }}" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0"></iframe> -->
-                        </div>
+                        <div class="fluid-width-video-wrapper lazy-iframe" style="padding-top: 56.2%;" data-iframe="{{ post.video }}"></div>
                       </div>
                     {% elsif post.slider-img %}
                       <div class="post-media">
