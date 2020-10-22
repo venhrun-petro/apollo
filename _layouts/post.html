@@ -2,59 +2,58 @@
 layout: blog
 ---
 
-<section id="inner-intro" class="inner-intro bg-image overlay-dark40 dark-bg parallax parallax-background2" data-background-img="{{site.url}}assets/img/full/17.jpg">
+<section id="inner-intro" class="inner-intro bg-image overlay-dark40 dark-bg parallax parallax-background2" data-background-img="{{ page.img | prepend: site.url }}">
   <div class="container">
       <div class="intro-content">
           <div class="intro-content-inner">
-              <h1 class="">{{ page.title }}</h1>
-              <h5 class="alt-title intro-sub-title">We share our best ideas in our blog</h5>
+              <h1 class="">{{ page.header-title }}</h1>
+              <h5 class="alt-title intro-sub-title">{{ page.header-text }}</h5>
           </div>
       </div>
   </div>
 </section>
 
 <section id="blog-single" class="section-padding">
-  <!-- Post Single -->
   <div class="container">
       <div class="row">
-          <!--Post Col-->
           <div class="col-md-8 offset-md-2">
-              <!-- Post -->
               <div class="blog-post">
-
                   <div class="post-meta">
-                      <span>by <a>John Doe</a>,</span>
-                      <span class="post-date">06 Jan 2016</span>
+                      <span>{{ page.author }},</span>
+                      <span class="post-date">{{ page.date | date_to_string }}</span>
                   </div>
                   <div class="post-header">
-                      <h2 class="alt-title">We denounce with righteous the indignation and dislike rerum facilis est et expedita distinctio.</h2>
+                      <h2 class="alt-title">{{ page.title }}</h2>
                   </div>
-                  <div class="post-media">
-                      <img alt="blog" src="{{site.url}}assets/img/blog/01.jpg">
-                  </div>
+                   {% if page.video %}
+                      <div class="post-media">
+                        <div class="fluid-width-video-wrapper" style="padding-top: 56.2%;"><iframe src="{{ page.video }}" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0"></iframe></div>
+                      </div>
+                    {% elsif page.slider-img %}
+                      <div class="post-media">
+                        <div class="owl-carousel post-carousel nf-carousel-theme white">
+                          {% for slider in page.slider-img %}
+                            <div class="item">
+                                <img src="{{ slider.img | prepend: site.url }}" alt="slider-img" />
+                            </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+                    {% else %}
+                      <div class="post-media">
+                        <img alt="blog" src="{{ page.img | prepend: site.url }}">
+                      </div>
+                    {% endif %}
 
                   <div class="post-entry">
+                      <p>{{ page.description }}</p>
                       {{ content }}
-                      <p>Praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-                      <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. <b><a target="_blank" href="http://nileforest.com">nileforest</a></b> Et harum quidem rerum facilis est et expedita distinctio.</p>
-                      <blockquote>
-                          We're not leaving here without Buster, man. Leave no crash-test dummy behind nihil impedit quo minus id quod maxime placeat facere!
-                      </blockquote>
-                      <p>Praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-                      <ul>
-                          <li>Excepturi sint occaecati cupiditate</li>
-                          <li>Molestias excepturi sint</li>
-                          <li>Similique sunt in culpa qui officia</li>
-                          <li>Deserunt mollitia animi</li>
-                      </ul>
-                      <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
                   </div>
                   <div class="post-tag">
-                      <span><a href="#">Branding</a></span>
-                      <span><a href="#">Design</a></span>
-                      <span><a href="#">Photography</a></span>
+                      {% for item in (0..page.tags.size) %}{% unless forloop.last %}
+                        <span><a href="#">{{ page.tags[item] }}</a></span>
+                      {% endunless %}{% endfor %}
                   </div>
-
                   <hr />
                   <div class="post-share">
                       <span>Share this Post:</span>
@@ -65,7 +64,7 @@ layout: blog
                           <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">
                               <i class="fa fa-twitter"></i>
                           </a>
-                          <a target="_blank" href="https://www.dribbble.com/sharing/?url={{ site.url }}{{ page.url }}">
+                          <a target="_blank" href="https://www.dribbble.com//share?url={{ site.url }}{{ page.url }}">
                               <i class="fa fa-dribbble"></i>
                           </a>
                           <a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}">
@@ -74,52 +73,36 @@ layout: blog
                           <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank">
                               <i class="fa fa-google-plus"></i>
                           </a>
-                      </div>
-                      <div class="page-share">
-                        <span>Share:</span>
-                        <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
-                      </div>
+                      </div> 
                   </div>
                   <hr />
-
+                  {% for poted in page.poted %}
                   <div class="post-author-panel">
                       <div class="post-author-hadding">
-                          <h4>Posted by <span><a href="#">John Doe</a></span></h4>
+                          <h4>Posted by <span><a href="#">{{ poted.name }}</a></span></h4>
                       </div>
                       <div class="post-author-body">
                           <div class="post-author-image">
-                              <img src="img/user-av.jpg" alt="" />
+                              <img src="{{ site.url }}{{ poted.images }}" alt="posted_image" />
                           </div>
-                          Eligendi et nobis neque minus mollitia sit repudiandae ad repellendus recusandae alias fugit accusantium laboriosam nisi reiciendis deleniti tenetur molestiae maxime id quaerat consequatur fugiat aliquam laborum nam aliquid. Consectetur, perferendis?
+                          {{ poted.text }}
                       </div>
                   </div>
-
+                  {% endfor %}
               </div>
-              <!-- End Post -->
-
-              <!-- Next Prev pagination -->
               <div class="pagination-nav mt-60">
                   <ul>
                     {% if page.previous.url %}
-                      <li class="prev"><a href="{{ site.url }}{{page.previous.url}}"><i class="fa fa-angle-left"></i>Prev Post</a></li>
+                      <li class="prev"><a href="{{ site.url }}{{page.previous.url}}"><i class="fa fa-angle-left"></i> Prev Post</a></li>
                     {% endif %}
                     {% if page.next.url %}
                       <li class="next"><a href="{{ site.url }}{{page.next.url}}">Next Post <i class="fa fa-angle-right"></i></a></li>
                     {% endif %}
                   </ul>
               </div>
-              <!-- Next Prev pagination -->
-
           </div>
-
-
       </div>
   </div>
-  <!-- End Post Single-->
-
-
 </section>
  
 

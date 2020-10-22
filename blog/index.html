@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: blog
 ---
-<section id="inner-intro" class="inner-intro bg-image overlay-dark40 dark-bg parallax parallax-background2" data-background-img="{{site.url}}assets/img/full/13.jpg">
+<section id="inner-intro" class="inner-intro bg-image overlay-dark40 dark-bg parallax parallax-background2" data-background-img="{{site.url}}/assets/img/full/13.jpg">
   <div class="container">
       <div class="intro-content">
           <div class="intro-content-inner">
@@ -14,14 +14,29 @@ layout: page
 <section class="section-padding">
   <div class="container">
       <div class="row">
-
-          <!--Post Col-->
           {% for post in paginator.posts %}
-            <div class="col-md-4 col-sm-6 mb-45">
+            <div class="col-md-4 col-sm-6 {% if post.video %} mb-30 {% else %} mb-45{% endif %}">
                 <div class="blog-post">
-                    <div class="post-media">
-                        <img alt="blog" src="{{ post.img | prepend: site.url }}">
-                    </div>
+                    {% if post.video %}
+                      <div class="post-media">
+                        <div class="fluid-width-video-wrapper" style="padding-top: 56.2%;"><iframe src="{{ post.video }}" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0"></iframe></div>
+                      </div>
+                    {% elsif post.slider-img %}
+                      <div class="post-media">
+                        <div class="owl-carousel post-carousel nf-carousel-theme white">
+                          {% for slider in post.slider-img %}
+                            <div class="item">
+                                <img src="{{ slider.img | prepend: site.url }}" alt="slider-img" />
+                            </div>
+                          {% endfor %}
+                             
+                        </div>
+                      </div>
+                    {% else %}
+                      <div class="post-media">
+                          <img alt="blog" src="{{ post.img | prepend: site.url }}">
+                      </div>
+                    {% endif %}
                     <div class="post-meta">
                         <span>{{ post.author }},</span>
                         <span class="post-date">{{ post.date | date_to_string }}</span>
@@ -38,26 +53,18 @@ layout: page
                     </div>
                 </div>
             </div>
-          {% endfor %}
-
-          <div class="pagination">
-            {% if paginator.previous_page %}
-              <a href="{{ paginator.previous_page_path  | prepend: site.url}}" class="previous">
-                Previous
-              </a>
-            {% else %}
-              <span class="previous">Previous</span>
-            {% endif %}
-            <span class="page_number ">
-              Page: {{ paginator.page }} of {{ paginator.total_pages }}
-            </span>
-            {% if paginator.next_page %}
-              <a href="{{ paginator.next_page_path | prepend: site.url }}" class="next">Next</a>
-            {% else %}
-              <span class="next ">Next</span>
-            {% endif %}
-          </div> 
+          {% endfor %} 
         </div>
+        <div class="pagination-nav mt-60">
+          <ul>
+            {% if paginator.previous_page %}
+              <li class="prev"><a href="{{ paginator.previous_page_path  | prepend: site.url}}"><i class="fa fa-angle-left"></i> Prev</a></li>
+            {% endif %}
+            {% if paginator.next_page %}
+              <li class="next"><a href="{{ paginator.next_page_path | prepend: site.url }}">Next <i class="fa fa-angle-right"></i></a></li>
+            {% endif %}
+          </ul>
+      </div>
       </div>
 </section>
 

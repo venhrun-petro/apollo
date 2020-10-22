@@ -2,27 +2,31 @@
 layout: post
 title: The forest in the fog
 date: 2017-08-20 13:32:20 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: post-6.jpg # Add image post (optional)
-tags: [Blog, Meditation]
-author: # Add name author (optional)
+description: Luctus pulvinar, hendrerit id, Maecenas tempus, tellus eget lorem. Maecenas nec odio et is ante.
+img: /assets/img/blog/01.jpg
+video: https://www.youtube.com/embed/8uZ98Pa3bPE
+tags: [Branding, Design, Photography]
+author: BY JOHN DO
+permalink: post7
+header-title: Blog Single
+header-text: WE SHARE OUR BEST IDEAS IN OUR BLOG
+
+poted: 
+    - name: John Doe
+      images: /assets/img/user-av.jpg
+      text: Eligendi et nobis neque minus mollitia sit repudiandae ad repellendus recusandae alias fugit accusantium laboriosam nisi reiciendis deleniti tenetur molestiae maxime id quaerat consequatur fugiat aliquam laborum nam aliquid. Consectetur, perferendis?
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. **[nileforest](http://nileforest.co)** Et harum quidem rerum facilis est et expedita distinctio.
 
-Jekyll also offers powerful support for code snippets:
+>We're not leaving here without Buster, man. Leave no crash-test dummy behind nihil impedit quo minus id quod maxime placeat facere!
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+* Excepturi sint occaecati cupiditate
+* Molestias excepturi sint
+* Similique sunt in culpa qui officia
+* Deserunt mollitia animi
+ 
+Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
