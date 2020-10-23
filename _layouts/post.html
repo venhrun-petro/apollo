@@ -49,11 +49,14 @@ layout: blog
                       <p>{{ page.description }}</p>
                       {{ content }}
                   </div>
+                  
                   <div class="post-tag">
                       {% for item in (0..page.tags.size) %}{% unless forloop.last %}
                         <span><a href="#">{{ page.tags[item] }}</a></span>
                       {% endunless %}{% endfor %}
                   </div>
+
+
                   <hr />
                   <div class="post-share">
                       <span>Share this Post:</span>
