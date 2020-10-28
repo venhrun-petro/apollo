@@ -21,6 +21,9 @@ url: "https://apolo.netlify.app"
 relative_permalinks: false
 permalink: /:title/
 
+posts:
+  permalink: /best-practices/:title/
+
 
 # Build settings
 plugins:
@@ -32,8 +35,8 @@ plugins:
 paginate: 6
 
 
-markdown: kramdown
-paginate_path: "/blog/:num/"
+# markdown: kramdown
+paginate_path: "/best-practices/:num/"
 
 
 

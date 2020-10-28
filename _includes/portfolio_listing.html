@@ -1,0 +1,9 @@
+<div class="container">
+
+    <div class="rows portfolio-grid gallery-popup">
+      {% for portfolio_item in data.portfolio %}
+        {% assign item = portfolio_item %}
+        {% include portfolio_item.html %}
+      {% endfor %}
+    </div>
+</div>

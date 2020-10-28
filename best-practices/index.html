@@ -29,6 +29,7 @@ layout: blog
                                 <img class="lazy" data-src="{{ slider.img | prepend: site.url }}" data-srcset="{{ slider.img | prepend: site.url }}" alt="slider-img" />
                             </div>
                           {% endfor %}
+                             
                         </div>
                       </div>
                     {% else %}
@@ -47,9 +48,8 @@ layout: blog
                         <p>{{ post.description }}</p>
                     </div>
                     <div class="post-tag">
-                      {% for item in (0..post.tags.size) %}{% unless forloop.last %}
-                        <span><a href="#">{{ post.tags[item] }}</a></span>
-                      {% endunless %}{% endfor %}
+                        <span><a href="{{ post.url | prepend: site.url }}">Branding</a></span>
+                        <span><a href="{{ post.url | prepend: site.url }}">Design</a></span>
                     </div>
                 </div>
             </div>

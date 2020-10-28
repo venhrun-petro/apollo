@@ -1,0 +1,30 @@
+- name: Saint Joseph Notre Dame
+  subtitle: Secondary School in San Francisco
+  livestream_url: https://www.youtube.com/watch?v=tGYez4U6ppA
+  thumbnail: assets/img/portfolio/sjnd.png
+
+- name: Opera Saratoga
+  subtitle: Costume contest and treasure hunt
+  livestream_url: https://quickjack.wistia.com/medias/vbzba7dpvf
+  thumbnail: assets/img/portfolio/opera.png
+  wistia_data: wistia_async_vbzba7dpvf
+
+- name: Point Reyes National Seashore Association
+  subtitle: Live event with an onsite AV team
+  thumbnail: assets/img/portfolio/reyes.png
+  new_tab_url: https://fb.watch/1paIXzt3io/
+
+- name: Carlington Booch
+  subtitle: Social Enterprise for Recovering Addicts
+  livestream_url: https://www.youtube.com/watch?v=7A_ohv_q2KA
+  thumbnail: assets/img/portfolio/booch.png
+
+- name: Urban School SF
+  subtitle: End of Year Fundraiser
+  thumbnail: assets/img/portfolio/urban.png
+  new_tab_url: https://www.youtube.com/watch?v=jRVywi42tmo
+
+- name: Brandeis School SF
+  subtitle: Highly Interactive and Fun
+  thumbnail: assets/img/portfolio/brandeis.png
+  livestream_url: https://www.youtube.com/watch?v=WAEdCEQGJT0

@@ -1,0 +1,24 @@
+<div class="portfolio-item branding photography coffee">
+    <div class="portfolio-box">
+      {% if wistia_data %} 
+      <div class="porfolio-popup wistia_embed lazy-video  popover=true popoverContent=link"  data-video="{{ item.wistia_data }}">
+        </div>
+      {% elsif item.new_tab_url %}
+        <a href="{{ item.new_tab_url }}" target=”_blank”>
+      {% else %}
+        <a class="porfolio-popup video-popup" href="{{ item.livestream_url }}" title="Portfolio Image 02">
+      {% endif %}
+            <div class="portfolio-image-wrap">
+              <img class="lazy" data-src="{{ item.thumbnail }}" data-srcset="{{ item.thumbnail}}" alt="" />
+            </div>
+            <div class="portfolio-caption-mask">
+                <div class="portfolio-caption-text">
+                    <div class="portfolio-caption-tb-cell">
+                      <h5 class="alt-title">{{ item.name }}</h5>
+                      <p>{{ item.subtitle }}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
